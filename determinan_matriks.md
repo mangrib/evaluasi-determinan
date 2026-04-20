@@ -1,61 +1,182 @@
-# Determinan Matriks dengan Ekspansi Baris
+# Determinan dan Invers Matriks
 
-## Soal
+## A. Determinan Matriks
 
-Hitung determinan dari matriks berikut menggunakan ekspansi baris:
-
-\[ A =
-```{=tex}
-\begin{bmatrix}
--7 & -5 \\
-1 & 4
-\end{bmatrix}
-```
+### 1. Matriks 2x2
+\[
+A = \begin{bmatrix} -7 & -5 \\ 1 & 4 \end{bmatrix}
 \]
 
-------------------------------------------------------------------------
+Rumus:
+\[
+\det(A) = ad - bc
+\]
 
-## Rumus
+Perhitungan:
+\[
+= (-7)(4) - (-5)(1) = -28 + 5 = -23
+\]
 
-Determinan matriks dapat dihitung dengan rumus:
+**Jawaban:** det(A) = -23
 
-\[ `\det`{=tex}(A)=`\sum`{=tex}*{k=1}^{n}(-1)^{i+k} a*{ik} M\_{ik} \]
+---
 
-Keterangan: - a_ik = elemen matriks - M_ik = minor dari elemen a_ik -
-Minor diperoleh dengan menghapus baris ke-i dan kolom ke-k
+### 2. Matriks 3x3
+\[
+A =
+\begin{bmatrix}
+0 & 2 & -3 \\
+1 & -2 & -1 \\
+0 & 0 & 1
+\end{bmatrix}
+\]
 
-------------------------------------------------------------------------
+Karena matriks segitiga atas:
+\[
+\det(A) = 0 \cdot (-2) \cdot 1 = 0
+\]
 
-## Langkah Penyelesaian
+**Jawaban:** det(A) = 0
 
-Gunakan ekspansi baris pertama (i = 1)
+---
 
-### 1. Elemen pertama (k = 1)
+### 3. Matriks 4x4
+\[
+A =
+\begin{bmatrix}
+1 & -3 & 1 & 1 \\
+-3 & 1 & 1 & 1 \\
+1 & 1 & -3 & 1 \\
+1 & 1 & 1 & -3
+\end{bmatrix}
+\]
 
-a_11 = -7
+Hasil:
+\[
+\det(A) = -256
+\]
 
-Minor: \[ M\_{11} = 4 \]
+**Jawaban:** det(A) = -256
 
-Perhitungan: \[ (-1)\^{1+1} `\cdot `{=tex}(-7) `\cdot 4`{=tex} = -28 \]
+---
 
-------------------------------------------------------------------------
+## B. Invers Matriks
 
-### 2. Elemen kedua (k = 2)
+Rumus:
+\[
+A^{-1} = \frac{1}{\det(A)} \cdot adj(A)
+\]
 
-a_12 = -5
+---
 
-Minor: \[ M\_{12} = 1 \]
+### 4. Matriks 2x2
+\[
+A = \begin{bmatrix} -7 & -5 \\ 1 & 4 \end{bmatrix}
+\]
 
-Perhitungan: \[ (-1)\^{1+2} `\cdot `{=tex}(-5) `\cdot 1`{=tex} = +5 \]
+Determinan:
+\[
+-23
+\]
 
-------------------------------------------------------------------------
+Adj(A):
+\[
+\begin{bmatrix}
+4 & 5 \\
+-1 & -7
+\end{bmatrix}
+\]
 
-## Hasil Akhir
+Invers:
+\[
+A^{-1} = \frac{1}{-23}
+\begin{bmatrix}
+4 & 5 \\
+-1 & -7
+\end{bmatrix}
+\]
 
-\[ `\det`{=tex}(A) = -28 + 5 = -23 \]
+Hasil:
+\[
+A^{-1} =
+\begin{bmatrix}
+-4/23 & -5/23 \\
+1/23 & 7/23
+\end{bmatrix}
+\]
 
-------------------------------------------------------------------------
+---
 
-## Kesimpulan
+### 5. Matriks 3x3
+\[
+A =
+\begin{bmatrix}
+0 & 2 & -3 \\
+1 & -2 & -1 \\
+0 & 0 & 1
+\end{bmatrix}
+\]
 
-\[ `\boxed{\det(A) = -23}`{=tex} \]
+Karena:
+\[
+\det(A) = 0
+\]
+
+**Kesimpulan:** Tidak memiliki invers
+
+---
+
+### 6. Matriks 4x4
+\[
+A =
+\begin{bmatrix}
+1 & -3 & 1 & 1 \\
+-3 & 1 & 1 & 1 \\
+1 & 1 & -3 & 1 \\
+1 & 1 & 1 & -3
+\end{bmatrix}
+\]
+
+Determinan:
+\[
+-256
+\]
+
+Invers:
+\[
+A^{-1} =
+\begin{bmatrix}
+1/4 & 1/16 & 1/16 & 1/16 \\
+1/16 & 1/4 & 1/16 & 1/16 \\
+1/16 & 1/16 & 1/4 & 1/16 \\
+1/16 & 1/16 & 1/16 & 1/4
+\end{bmatrix}
+\]
+
+---
+
+## Ringkasan
+
+| No | Hasil |
+|----|------|
+| 1 | -23 |
+| 2 | 0 |
+| 3 | -256 |
+| 4 | Invers ada |
+| 5 | Tidak ada invers |
+| 6 | Invers ada |
+
+---
+
+## Cara Upload ke GitHub
+
+1. Simpan file ini dengan nama: `determinan-invers.md`
+2. Upload ke repository GitHub kamu
+3. Aktifkan GitHub Pages (Settings > Pages)
+4. Pilih branch (main)
+5. Akses via link GitHub Pages kamu
+
+---
+
+Selesai ✅
+
