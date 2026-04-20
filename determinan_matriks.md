@@ -153,30 +153,4 @@ A^{-1} =
 \end{bmatrix}
 \]
 
----
-
-## Ringkasan
-
-| No | Hasil |
-|----|------|
-| 1 | -23 |
-| 2 | 0 |
-| 3 | -256 |
-| 4 | Invers ada |
-| 5 | Tidak ada invers |
-| 6 | Invers ada |
-
----
-
-## Cara Upload ke GitHub
-
-1. Simpan file ini dengan nama: `determinan-invers.md`
-2. Upload ke repository GitHub kamu
-3. Aktifkan GitHub Pages (Settings > Pages)
-4. Pilih branch (main)
-5. Akses via link GitHub Pages kamu
-
----
-
-Selesai ✅
 
